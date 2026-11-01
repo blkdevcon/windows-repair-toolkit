@@ -26,7 +26,7 @@ Manual download
 Download the `WindowsRepairToolkit.bat` file
 Right-click the file and select "Run as administrator"
 
-## Alternative: Launch from Command Prompt (Admin)
+## Alternative: Launch from Powershell (Admin)
 ```
 cd path/to/script
 WindowsRepairToolkit.bat
@@ -170,6 +170,14 @@ Opens the Windows Memory Diagnostic tool to schedule a RAM scan on the next rebo
 **Command:** `mdsched.exe`  
 **Time:** 10–20 minutes (runs during the reboot)  
 **Notes:** You will be prompted to restart now or schedule the scan for the next time the machine boots. Results are displayed after the reboot completes.
+
+---
+
+### [17] Software Update
+Updates all installed applications using the Windows Package Manager.  
+**Command:** `winget upgrade --all`  
+**Time:** Varies depending on the number of updates available  
+**Notes:** Requires `winget` (built into Windows 11; available via the [App Installer](https://apps.microsoft.com/detail/9nblggh4nns1) on Windows 10). Some applications may require a reboot after updating.
 
 ---
 
