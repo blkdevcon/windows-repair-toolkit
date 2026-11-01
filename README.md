@@ -1,6 +1,7 @@
 # Windows Repair Toolkit
 
 A command-line batch script for diagnosing and repairing common Windows system issues. Provides a numbered menu of built-in Windows tools — no third-party software required. All operations are logged automatically to a timestamped file on your Desktop.
+
 ![Administrator Shield](https://img.shields.io/badge/requires-administrator-blue)
 ![Windows Support](https://img.shields.io/badge/platform-Windows-brightgreen)
 ![Batch Script](https://img.shields.io/badge/language-Batch-orange)
