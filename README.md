@@ -210,9 +210,11 @@ If DISM fails or requires a restart, resolve that condition before running SFC.
 
 ## 📝 License
 This project is released into the public domain. Use and modify freely.
+
 ---
 
 ## 🔍 Troubleshooting
+
 If you encounter issues:
 
 1. Ensure you're running as administrator
