@@ -55,6 +55,7 @@ echo   [13] Signed Drivers Info
 echo   [14] Device Problem Scan
 echo   [15] Install Missing Drivers
 echo   [16] Scan RAM
+echo   [17] Software Update
 echo.
 echo   [0]  Exit
 echo.
@@ -76,6 +77,7 @@ if "%CHOICE%"=="13" goto :OPT_DRIVERSIGNED
 if "%CHOICE%"=="14" goto :OPT_DEVPROBLEM
 if "%CHOICE%"=="15" goto :OPT_INSTALLMISSING
 if "%CHOICE%"=="16" goto :OPT_SCANRAM
+if "%CHOICE%"=="17" goto :OPT_SOFTWAREUPDATE
 if "%CHOICE%"=="0"  goto :EXIT
 echo   Invalid selection. Try again.
 timeout /t 2 >nul
@@ -290,6 +292,19 @@ echo.
 mdsched.exe
 echo. >> "%LOGFILE%"
 call :LOG "=== Scan RAM scheduled ==="
+pause
+goto :MENU
+
+:: ─────────────────────────────────────────────────────────────────────────────
+:OPT_SOFTWAREUPDATE
+cls
+call :LOG "=== [17] Software Update ==="
+echo Checking for and installing updates for all installed applications...
+echo This may take several minutes depending on the number of updates available.
+echo.
+winget upgrade --all
+echo. >> "%LOGFILE%"
+call :LOG "=== Software Update complete ==="
 pause
 goto :MENU
 
