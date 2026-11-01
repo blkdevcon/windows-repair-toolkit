@@ -4,7 +4,7 @@ A command-line batch script for diagnosing and repairing common Windows system i
 
 ---
 
-🔍## Requirements 
+🔍 ## Requirements 
 
 - Windows 10 or Windows 11
 - Must be run as **Administrator**
@@ -12,7 +12,7 @@ A command-line batch script for diagnosing and repairing common Windows system i
 
 ---
 
-🚀# Getting Started
+🚀 # Getting Started
 ## Installation
 Quick start
 Paste into Windows PowerShell and approve the administrator prompt:
@@ -183,7 +183,7 @@ Each log entry includes the time the operation ran and its completion status. Th
 
 ---
 
-⚠️## Recommended Workflow
+⚠️ ## Recommended Workflow
 
 For general Windows repair, use this sequence:
 
@@ -194,7 +194,7 @@ For general Windows repair, use this sequence:
 
 ---
 
-📋## Command Execution Order
+📋 ## Command Execution Order
 The sequential repair mode follows Microsoft's recommended order:
 
 1. DISM /RestoreHealth - Repairs the Windows component store
@@ -203,11 +203,11 @@ If DISM fails or requires a restart, resolve that condition before running SFC.
 
 ---
 
-📝## License
+📝 ## License
 This project is released into the public domain. Use and modify freely.
 ---
 
-🔍## Troubleshooting
+🔍 ## Troubleshooting
 If you encounter issues:
 
 1. Ensure you're running as administrator
