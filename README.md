@@ -17,7 +17,9 @@ A command-line batch script for diagnosing and repairing common Windows system i
 Quick start
 Paste into Windows PowerShell and approve the administrator prompt:
 
-`code & { $p = "$env:TEMP\sys_repair.bat"; Invoke-WebRequest -UseBasicParsing -Uri 'https://github.com/blkdevcon/windows-repair-toolkit/blob/master/WindowsRepairToolkit.bat' -OutFile $p -ErrorAction Stop; Start-Process -FilePath $p -Verb RunAs }`
+```
+& { $p = "$env:TEMP\sys_repair.bat"; Invoke-WebRequest -UseBasicParsing -Uri 'https://github.com/blkdevcon/windows-repair-toolkit/blob/master/WindowsRepairToolkit.bat' -OutFile $p -ErrorAction Stop; Start-Process -FilePath $p -Verb RunAs }
+```
 Warning: Downloads and runs code from main as administrator. Only run if you trust this repository.
 
 Manual download
