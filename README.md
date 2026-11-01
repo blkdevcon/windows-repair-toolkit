@@ -23,9 +23,12 @@ Warning: Downloads and runs code from main as administrator. Only run if you tru
 Manual download
 Download the `WindowsRepairToolkit.bat` file
 Right-click the file and select "Run as administrator"
-``` # Alternative: Launch from Command Prompt (Admin)
+
+# Alternative: Launch from Command Prompt (Admin)
+```
 cd path/to/script
-WindowsRepairToolkit.bat```
+WindowsRepairToolkit.bat
+```
 
 A log file is created automatically at:
 ```
