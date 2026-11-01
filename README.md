@@ -4,7 +4,7 @@ A command-line batch script for diagnosing and repairing common Windows system i
 
 ---
 
-## Requirements
+🔍## Requirements 
 
 - Windows 10 or Windows 11
 - Must be run as **Administrator**
@@ -12,11 +12,20 @@ A command-line batch script for diagnosing and repairing common Windows system i
 
 ---
 
-## How to Run
+🚀# Getting Started
+## Installation
+Quick start
+Paste into Windows PowerShell and approve the administrator prompt:
 
-1. Right-click `WindowsRepairToolkit.bat`
-2. Select **Run as administrator**
-3. Select an option from the menu by typing its number and pressing Enter
+`code & { $p = "$env:TEMP\sys_repair.bat"; Invoke-WebRequest -UseBasicParsing -Uri 'https://github.com/blkdevcon/windows-repair-toolkit/blob/master/WindowsRepairToolkit.bat' -OutFile $p -ErrorAction Stop; Start-Process -FilePath $p -Verb RunAs }`
+Warning: Downloads and runs code from main as administrator. Only run if you trust this repository.
+
+Manual download
+Download the `WindowsRepairToolkit.bat` file
+Right-click the file and select "Run as administrator"
+`code # Alternative: Launch from Command Prompt (Admin)
+cd path/to/script
+WindowsRepairToolkit.bat`
 
 A log file is created automatically at:
 ```
@@ -174,7 +183,7 @@ Each log entry includes the time the operation ran and its completion status. Th
 
 ---
 
-## Recommended Workflow
+⚠️## Recommended Workflow
 
 For general Windows repair, use this sequence:
 
@@ -185,6 +194,28 @@ For general Windows repair, use this sequence:
 
 ---
 
-## License
+📋## Command Execution Order
+The sequential repair mode follows Microsoft's recommended order:
 
+1. DISM /RestoreHealth - Repairs the Windows component store
+2. sfc /scannow - Runs after successful image repair
+If DISM fails or requires a restart, resolve that condition before running SFC.
+
+---
+
+📝## License
 This project is released into the public domain. Use and modify freely.
+---
+
+🔍## Troubleshooting
+If you encounter issues:
+
+1. Ensure you're running as administrator
+2. Check internet connectivity for file downloads
+3. Verify Windows Update service is accessible
+4. Check system drive for sufficient space (at least 2GB free recommended)
+5. Review logs in %windir%\Logs\DISM\dism.log
+- Also review the per-run log path printed by the script
+- Exported [SR] entries include historical SFC details, not just current-run errors
+6. If sequential repairs don't resolve issues, try running individual commands separately
+7. For persistent corruption, consider Windows in-place upgrade or system restore
