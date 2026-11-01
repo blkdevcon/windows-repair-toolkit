@@ -26,7 +26,7 @@ Manual download
 Download the `WindowsRepairToolkit.bat` file
 Right-click the file and select "Run as administrator"
 
-# Alternative: Launch from Command Prompt (Admin)
+## Alternative: Launch from Command Prompt (Admin)
 ```
 cd path/to/script
 WindowsRepairToolkit.bat
