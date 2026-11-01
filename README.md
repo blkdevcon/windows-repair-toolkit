@@ -178,7 +178,7 @@ Closes the toolkit. The log file path is displayed before exit.
 
 ---
 
-## Logging
+## 📜 Logging
 
 Every operation is logged to a timestamped file on your Desktop:
 ```
